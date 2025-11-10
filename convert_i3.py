@@ -1,4 +1,4 @@
-from storm_analysis.sa_library import readinsight3
+import readinsight3
 from pathlib import Path
 
 #Set your input file here
