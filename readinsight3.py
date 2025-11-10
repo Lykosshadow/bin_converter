@@ -12,7 +12,7 @@ import struct
 
 from xml.etree import ElementTree
     
-import storm_analysis.sa_library.i3dtype as i3dtype
+import i3Data as i3dtype
 
 
 class I3BadStatusException(Exception):
