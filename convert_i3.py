@@ -3,6 +3,7 @@
 import readinsight3
 from pathlib import Path
 import sys
+import pandas as pd
 
 def main():
     if len(sys.argv) != 2:
@@ -20,8 +21,11 @@ def main():
     # Load Insight3 .bin file
     i3_data = readinsight3.loadI3File(str(input_file))
 
+    # Convert structured array to DataFrame
+    df = pd.DataFrame(i3_data)
+
     # Save as CSV
-    i3_data.toCSV(str(output_file))
+    df.to_csv(output_file, index=False)
 
     print(f"Converted {input_file} → {output_file}")
 
