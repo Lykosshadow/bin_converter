@@ -24,7 +24,10 @@ def main():
     # Convert structured array to DataFrame
     df = pd.DataFrame(i3_data)
 
-    # Save as CSV
+    # Change the output filename to .txt
+    output_file = input_file.with_suffix(".txt")
+
+    # Save as comma-separated text
     df.to_csv(output_file, index=False)
 
     print(f"Converted {input_file} → {output_file}")
